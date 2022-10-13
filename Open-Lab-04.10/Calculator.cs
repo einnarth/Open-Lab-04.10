@@ -1,4 +1,7 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
 
 namespace Open_Lab_04._10
 {
@@ -6,7 +9,11 @@ namespace Open_Lab_04._10
     {
         public float Average(int[] nums)
         {
-            throw new NotImplementedException();
-        }
+            List<int> list = nums.ToList();
+          float j =  list.AsQueryable().Sum();
+          float k = list.Count;
+          float u = j / k;
+          return u;
+        } 
     }
 }
